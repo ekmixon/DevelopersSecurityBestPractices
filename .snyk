@@ -1,0 +1,150 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.21.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - browser-sync > connect > debug:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-stylus > stylus > debug:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > connect > finalhandler > debug:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > localtunnel > debug:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > serve-index > debug:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > serve-static > send > debug:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2021-07-15T20:41:16.745Z'
+  'npm:extend:20180424':
+    - gulp > liftoff > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > localtunnel > request > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-gifsicle > gifsicle > bin-build > decompress > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > decompress > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-optipng > optipng-bin > bin-build > decompress > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-gifsicle > gifsicle > bin-build > download > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-optipng > optipng-bin > bin-build > download > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-gifsicle > gifsicle > bin-build > download > gulp-decompress > decompress > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > gulp-decompress > decompress > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-optipng > optipng-bin > bin-build > download > gulp-decompress > decompress > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > gulp-decompress > decompress > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > gulp-decompress > decompress > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > gulp-decompress > decompress > vinyl-fs > glob-stream > extend:
+        patched: '2021-07-15T20:41:16.745Z'
+  'npm:hoek:20180212':
+    - browser-sync > localtunnel > request > hawk > hoek:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > localtunnel > request > hawk > boom > hoek:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > localtunnel > request > hawk > sntp > hoek:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > localtunnel > request > hawk > cryptiles > boom > hoek:
+        patched: '2021-07-15T20:41:16.745Z'
+  'npm:lodash:20180130':
+    - browser-sync > easy-extender > lodash:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > opt-merger > lodash:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > eazy-logger > opt-merger > lodash:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > foxy > eazy-logger > opt-merger > lodash:
+        patched: '2021-07-15T20:41:16.745Z'
+  'npm:mime:20170907':
+    - browser-sync > serve-static > send > mime:
+        patched: '2021-07-15T20:41:16.745Z'
+  'npm:minimatch:20160620':
+    - browser-sync > foxy > resp-modifier > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-gifsicle > gifsicle > bin-build > decompress > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > decompress > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-optipng > optipng-bin > bin-build > decompress > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-gifsicle > gifsicle > bin-build > download > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-optipng > optipng-bin > bin-build > download > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-gifsicle > gifsicle > bin-build > download > gulp-decompress > decompress > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > gulp-decompress > decompress > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-optipng > optipng-bin > bin-build > download > gulp-decompress > decompress > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > gulp-decompress > decompress > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > gulp-decompress > decompress > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-imagemin > imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > gulp-decompress > decompress > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-stylus > stylus > glob > minimatch:
+        patched: '2021-07-15T20:41:16.745Z'
+  'npm:ms:20170412':
+    - browser-sync > connect > debug > ms:
+        patched: '2021-07-15T20:41:16.745Z'
+    - gulp-stylus > stylus > debug > ms:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > serve-static > send > ms:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > connect > finalhandler > debug > ms:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > localtunnel > debug > ms:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > serve-index > debug > ms:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > serve-static > send > debug > ms:
+        patched: '2021-07-15T20:41:16.745Z'
+    - browser-sync > socket.io > socket.io-adapter > socket.io-parser > debug > ms:
+        patched: '2021-07-15T20:41:16.745Z'
+  'npm:qs:20170213':
+    - browser-sync > localtunnel > request > qs:
+        patched: '2021-07-15T20:41:16.745Z'
+  'npm:stringstream:20180511':
+    - browser-sync > localtunnel > request > stringstream:
+        patched: '2021-07-15T20:41:16.745Z'
+  'npm:tough-cookie:20170905':
+    - browser-sync > localtunnel > request > tough-cookie:
+        patched: '2021-07-15T20:41:16.745Z'
+  'npm:tunnel-agent:20170305':
+    - browser-sync > localtunnel > request > tunnel-agent:
+        patched: '2021-07-15T20:41:16.745Z'
