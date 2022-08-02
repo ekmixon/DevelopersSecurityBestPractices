@@ -40,17 +40,14 @@ class MD5Hasher(object):
         encoded = self.django_hasher.encode(password, self.pepper + salt)
         # Replace 'md5$' by '$1$'
         _, salt, passwd = encoded.split('$')
-        return '$dynamic_4$%s$%s' % (passwd, remove_pepper(salt, self.pepper))
+        return f'$dynamic_4${passwd}${remove_pepper(salt, self.pepper)}'
 
     @property
     def iterations(self):
         return 1
 
     def jtr_format(self):
-        if self.salt is None:
-            return 'Raw-MD5'
-        else:
-            return "dynamic_4"
+        return 'Raw-MD5' if self.salt is None else "dynamic_4"
 
 
 class BCryptHasher(object):
@@ -108,11 +105,11 @@ class PBKDF2Hasher(object):
         if self.salt == 'same':
             encoded = self.django_hasher.encode(password, self.global_salt)
             # Replace 'md5$' by '$1$'
-            return "$django$*1*" + encoded
+            return f"$django$*1*{encoded}"
         elif self.salt == 'user':
             encoded = self.django_hasher.encode(password, self.django_hasher.salt())
             # Replace 'md5$' by '$1$'
-            return "$django$*1*" + encoded
+            return f"$django$*1*{encoded}"
 
     @property
     def iterations(self):
@@ -130,7 +127,7 @@ def get_hasher(algorithm, salt, pepper, rounds):
     elif algorithm == 'pbkdf2':
         return PBKDF2Hasher(salt, pepper, rounds)
     else:
-        raise NotImplementedError("Bad algorithm %s" % algorithm)
+        raise NotImplementedError(f"Bad algorithm {algorithm}")
 
 
 def main():
@@ -147,14 +144,16 @@ def main():
     msg = "Generating %s usernames/password with algorithm %r with salt %r [%r rounds] and pepper %r\n"
     print(msg % (args.n, args.algorithm, args.salt, hasher.iterations, args.pepper))
     with open('passwd', 'w') as output_file:
-        for i in range(args.n):
+        for _ in range(args.n):
             username = FAKE.profile(fields='username')['username']
             password = hasher.encode(random.choice(PASSWORDS))
-            print("%s:%s" % (username, password))
+            print(f"{username}:{password}")
             output_file.write("%s:%s\n" % (username, password))
 
     print("\nOutput also write in file `passwd`")
-    print("You can crack it with `john --wordlist=password.list --format=%s passwd`" % hasher.jtr_format())
+    print(
+        f"You can crack it with `john --wordlist=password.list --format={hasher.jtr_format()} passwd`"
+    )
 
 if __name__ == '__main__':
     main()

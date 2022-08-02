@@ -18,15 +18,15 @@ def strcmp(s1, s2):
 
 @app.route("/")
 def protected():
-    token = request.headers.get('X-TOKEN')
+    if token := request.headers.get('X-TOKEN'):
+        return (
+            "Hello admin user! Here is your secret content"
+            if strcmp(token, SECRET_TOKEN)
+            else ("WHO ARE YOU? GET OUT!", 403)
+        )
 
-    if not token:
-        return "Missing token", 401
-
-    if strcmp(token, SECRET_TOKEN):
-        return "Hello admin user! Here is your secret content"
     else:
-        return "WHO ARE YOU? GET OUT!", 403
+        return "Missing token", 401
 
 
 if __name__ == "__main__":
