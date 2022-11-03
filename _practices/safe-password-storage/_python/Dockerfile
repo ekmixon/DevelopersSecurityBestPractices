@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:kinetic-20220830
 MAINTAINER boris@sqreen.io
 
 # Install john the ripper
